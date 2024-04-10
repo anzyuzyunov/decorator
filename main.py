@@ -9,7 +9,7 @@ def decorator(old_func):
 
         result = old_func(*args,**kwargs)
 
-        with open('log.txt', 'a') as f:
+        with open('main.log', 'a') as f:
             time = datetime.datetime.now().strftime('%Y %B %d %H:%M')
             f.write(f'Функция {old_func.__name__} Время запуска {time},  Аргументы функции ={args}, результат {result}\n')
     # действия после вызова исходной функции
